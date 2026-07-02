@@ -1,0 +1,7 @@
+58
+function lengthOfLastWord(s: string): number
+{
+    s = s.trim();
+    let arr : string[] = s.split(' ');
+    return arr[arr.length - 1].length;
+};

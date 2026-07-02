@@ -1,0 +1,26 @@
+136
+
+function singleNumber(nums: number[]): number
+{
+    let res : number = 0;
+    // 2,2,1
+    for(let i : number = 0; i < nums.length; i++)
+    {
+        let sanoq : number = 0;
+        for(let j : number = i + 1;j < nums.length; j++)
+        {
+            if(nums[i] == nums[j])
+            {
+                ++sanoq;
+            }
+        }
+        
+        if(sanoq == 0)
+        {
+            res = nums[i];
+            break;
+        }
+    }
+    
+    return res;
+};
