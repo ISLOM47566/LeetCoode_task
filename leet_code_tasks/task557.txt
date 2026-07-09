@@ -1,0 +1,15 @@
+function reverseWords(s: string): string {
+    let result = "";
+    
+    const W = s.split(" ");
+
+for (let i = 0; i < W.length; i++) {
+        for (let j = W[i].length - 1; j >= 0; j--) {
+          
+         result +=W[i][j];
+        }
+     if (i < W.length - 1) result += " ";
+    }
+
+    return result;
+}
